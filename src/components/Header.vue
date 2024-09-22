@@ -3,5 +3,5 @@
 </script>
 
 <template>
-  <h1>Hello</h1>
+  <h1>Grocery Trip Calculator</h1>
 </template>
