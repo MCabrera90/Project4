@@ -24,15 +24,15 @@
     <h3>Add a new transaction</h3>
     <form id="form" @submit.prevent="onSubmit">
         <div class="form-control">
-            <label for="text">Enter Transaction</label>
-            <input type="text" id="text" v-model="text" placeholder="Enter Transaction..."/>
+            <label for="text">Enter Item</label>
+            <input type="text" id="text" v-model="text" placeholder="Enter Item..."/>
         </div>
         <div class="form-control">
-            <label for="amount">Enter Transaction Amount</label>
-            <input type="text" id="amount" v-model="amount" placeholder="Enter Negative Value for Expenses"/>
+            <label for="amount">Enter Cost</label>
+            <input type="text" id="amount" v-model="amount" placeholder="Enter Negative Value for Discounts"/>
 
         </div>
-        <button class="btn">Add Transaction</button>
+        <button class="btn">Add Item</button>
 
 
     </form>
