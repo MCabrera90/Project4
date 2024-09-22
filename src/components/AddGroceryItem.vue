@@ -3,6 +3,7 @@
     
     const text = ref('')
     const amount = ref('')
+    const calories = ref('')
 
     const emit = defineEmits([
         'transactionSubmitted'

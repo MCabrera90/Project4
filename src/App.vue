@@ -48,6 +48,7 @@
       id: generateID(),
       text: transactionData.text,
       amount: transactionData.amount,
+      calories: transactionData.calories,
     })
     saveToLocalStorage()
   }
