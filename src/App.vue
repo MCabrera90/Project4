@@ -77,9 +77,14 @@
 <template>
     <Header></Header>
     <div class="container">
-      <TotalBalance :subTotal="calcSub" :tax="calcTax" :total="calcTot"></TotalBalance>
       <ItemsDiscounts :income="moneyIn" :expense="moneyOut"></ItemsDiscounts>
       <AddGroceryItem @transactionSubmitted="handleTransaction"></AddGroceryItem>
       <GroceryList :transactions="transactions" @transactionDeleted="handleDelete"></GroceryList>
+      <label>Subtotal</label>
+      <TotalBalance :amount="calcSub"></TotalBalance>
+      <label>Tax</label>
+      <TotalBalance :amount="calcTax"></TotalBalance>
+      <label>Total</label>
+      <TotalBalance :amount="calcTot"></TotalBalance>
     </div>
 </template>
