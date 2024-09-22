@@ -80,6 +80,7 @@
       <ItemsDiscounts :income="moneyIn" :expense="moneyOut"></ItemsDiscounts>
       <AddGroceryItem @transactionSubmitted="handleTransaction"></AddGroceryItem>
       <GroceryList :transactions="transactions" @transactionDeleted="handleDelete"></GroceryList>
+      <h4>Total Amounts</h4>
       <label>Subtotal</label>
       <TotalBalance :amount="calcSub"></TotalBalance>
       <label>Tax</label>

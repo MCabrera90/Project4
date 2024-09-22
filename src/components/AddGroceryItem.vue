@@ -11,12 +11,14 @@
         const transactionData = {
             text: text.value,
             amount: parseFloat(amount.value),
+            calories: parseFloat(calories.value),
         }
 
         emit('transactionSubmitted', transactionData)
 
         text.value = ''
         amount.value = ''
+        calories.value = ''
     }
 </script>
 
@@ -30,7 +32,10 @@
         <div class="form-control">
             <label for="amount">Enter Cost</label>
             <input type="text" id="amount" v-model="amount" placeholder="Enter Negative Value for Discounts"/>
-
+        </div>
+        <div class="form-control">
+            <label for="calories">Enter Number of Calories</label>
+            <input type="text" id="calories" v-model="calories" placeholder="Enter calorie amount"/>
         </div>
         <button class="btn">Add Item</button>
 
