@@ -12,19 +12,25 @@
 
   const calcSub = computed(()=>{
     return transactions.value.reduce((acc, x)=>{
-      return acc+x.amount
+      return acc + x.amount
     },0)
   })
 
   const calcTax = computed(()=>{
     return transactions.value.reduce((acc, x)=>{
-      return (acc+x.amount*0.0825).toFixed(3)
+      return (acc + x.amount * 0.0825).toFixed(3)
     },0)
   })
 
   const calcTot = computed(()=>{
     return transactions.value.reduce((acc, x)=>{
-      return (acc+x.amount*1.0825).toFixed(2)
+      return (acc + x.amount * 1.0825).toFixed(2)
+    },0)
+  })
+
+  const calcCalories = computed(()=>{
+    return transactions.value.reduce((acc, x)=>{
+      return acc + x.calories
     },0)
   })
 
@@ -88,5 +94,7 @@
       <TotalBalance :amount="calcTax"></TotalBalance>
       <label>Total</label>
       <TotalBalance :amount="calcTot"></TotalBalance>
+      <label>Calories</label>
+      <TotalBalance :amount="calcCalories"></TotalBalance>
     </div>
 </template>

@@ -12,7 +12,7 @@
         const transactionData = {
             text: text.value,
             amount: parseFloat(amount.value),
-            calories: parseFloat(calories.value),
+            calories: parseInt(calories.value),
         }
 
         emit('transactionSubmitted', transactionData)
