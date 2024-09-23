@@ -18,13 +18,13 @@
 
   const calcTax = computed(()=>{
     return transactions.value.reduce((acc, x)=>{
-      return (acc + x.amount * 0.0825).toFixed(3)
+      return (acc + x.amount * 0.0825)
     },0)
   })
 
   const calcTot = computed(()=>{
     return transactions.value.reduce((acc, x)=>{
-      return (acc + x.amount * 1.0825).toFixed(2)
+      return ((acc + x.amount) * (1.0825))
     },0)
   })
 
